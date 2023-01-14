@@ -62,7 +62,7 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["S_B_8"], callback_data="help_all_text"
+                help_all_text=_["S_B_8"], callback_data="settings_back_helper"
             )
         ]
     ]
