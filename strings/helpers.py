@@ -110,66 +110,7 @@ HELP_4 = """✅<u>**Extra  Commands:**</u>
 
 3️⃣ **Tipe Putar** [Semua Orang atau Admin] - Jika admin, hanya admin yang ada di grup yang dapat memutar musik di obrolan suara."""
 
-HELP_5 = """🔰**<u>ADD & REMOVE SUDO USERS :</u>**
-/addsudo [Nama pengguna atau Balas ke pengguna]
-/delsudo [Nama pengguna atau Balas ke pengguna]
-
-🛃**<u>HEROKU:</u>**
-/usage - Dyno Usage.
-
-🌐**<u>CONFIG VARS:</u>**
-/get_var - Dapatkan config var dari Heroku atau .env.
-/del_var - Hapus semua var di Heroku atau .env.
-/set_var [Var Name] [Value] - Atur Var atau Perbarui Var di heroku atau .env. Pisahkan Var dan Nilainya dengan spasi.
-
-🤖**<u>BOT COMMANDS:</u>**
-/reboot - Nyalakan ulang Bot Anda.
-/update - Perbarui Bot.
-/speedtest - Periksa kecepatan server
-/maintenance [aktifkan / nonaktifkan]
-/logger [aktifkan / nonaktifkan] - Bot mencatat kueri yang dicari di grup logger.
-/get_log [Jumlah Baris] - Dapatkan log bot Anda dari heroku atau vps. Bekerja untuk keduanya.
-/autoend [enable|disable] - Aktifkan Auto stream end setelah 3 menit jika tidak ada yang mendengarkan.
-
-📈**<u>STATS COMMANDS:</u>**
-/aktif - Periksa obrolan suara aktif di bot.
-/video - Periksa panggilan video aktif di bot.
-/stats - Periksa Statistik Bot
-
-⚠️**<u>BLACKLIST CHAT FUNCTION:</u>**
-/blacklistchat [CHAT_ID] - Daftar hitam obrolan apa pun dari menggunakan Bot Musik
-/whitelistchat [CHAT_ID] - Daftar putih obrolan apa pun yang masuk daftar hitam dari menggunakan Bot Musik
-/blacklistedchat - Periksa semua obrolan yang masuk daftar hitam.
-
-👤**<u>BLOCKED FUNCTION:</u>**
-/block [Nama Pengguna atau Balas ke pengguna] - Mencegah pengguna menggunakan perintah bot.
-/unblock [Nama Pengguna atau Balas ke pengguna] - Hapus pengguna dari Daftar Blokir Bot.
-/blockedusers - Periksa Daftar Pengguna yang diblokir
-
-👤**<u>GBAN FUNCTION:</u>**
-/gban [Nama Pengguna atau Balas ke pengguna] - Gban pengguna dari obrolan yang dilayani bot dan hentikan dia menggunakan bot Anda.
-/ungban [Nama Pengguna atau Balas ke pengguna] - Hapus pengguna dari Daftar gbanned Bot dan izinkan dia menggunakan bot Anda
-/gbannedusers - Periksa Daftar Pengguna Gbanned
-
-🎥**<u>VIDEOCALLS FUNCTION:</u>**
-/set_video_limit [Jumlah Obrolan] - Tetapkan Jumlah Obrolan maksimum yang diizinkan untuk Panggilan Video dalam satu waktu. Default untuk 3 obrolan.
-/videomode [download|m3u8] - Jika mode unduh diaktifkan, Bot akan mengunduh video alih-alih memutarnya dalam bentuk M3u8. Secara default ke M3u8. Anda dapat menggunakan mode unduhan saat kueri apa pun tidak diputar dalam mode m3u8.
-
-⚡️**<u>PRIVATE BOT FUNCTION:</u>**
-/authorize[CHAT_ID] - Izinkan obrolan untuk menggunakan bot Anda.
-/unauthorize [CHAT_ID] - Melarang obrolan menggunakan bot Anda.
-/authorized - Periksa semua obrolan bot Anda yang diizinkan.
-
-🌐**<u>BROADCAST FUNCTION:</u>**
-/broadcast [Pesan atau Balas Pesan] - Menyiarkan pesan apa pun ke Obrolan yang Dilayani Bot.
-
-<u>options for broadcast:</u>
-**-pin** : Ini akan menyematkan pesan Anda
-**-pinloud** : Ini akan menyematkan pesan Anda dengan pemberitahuan keras
-**-user** : Ini akan menyiarkan pesan Anda ke pengguna yang telah memulai bot Anda.
-**-assistant** : Ini akan menyiarkan pesan Anda dari akun asisten bot Anda.
-**-nobot** : Ini akan memaksa bot Anda untuk tidak menyiarkan pesan
-
-**Contoh:** `/broadcast -user -assistant -pin Halo Pengujian`
-
+HELP_5 = """
+-KETIK /help DIBAWAH UNTUK MELIHAT COMMAND MANAGE AMANGROBOT
+-TYPE /help BELOW TO VIEW THE AMANGROBOT COMMAND MANAGE
 """
