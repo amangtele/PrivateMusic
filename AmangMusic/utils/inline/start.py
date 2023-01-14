@@ -100,6 +100,12 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
                 text=_["S_B_5"],
                 url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
             )
+    buttons.append(
+        [
+            InlineKeyboardButton(
+                text=_["☕️ Donasi"],
+                url=f"https://t.me/amwangstore/52",
+            )
         ]
     )
     if GITHUB_REPO and OWNER:
@@ -116,7 +122,7 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
             buttons.append(
                 [
                     InlineKeyboardButton(
-                        text=_["S_B_6"], url=f"https://t.me/amwangstore/52"
+                        text=_["S_B_6"], url=f"{GITHUB_REPO}"
                     ),
                 ]
             )
@@ -128,6 +134,7 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
                     ),
                 ]
             )
+            
     buttons.append(
         [InlineKeyboardButton(text=_["ST_B_6"], callback_data="LG")]
     )
