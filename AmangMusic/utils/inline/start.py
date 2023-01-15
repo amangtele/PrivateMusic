@@ -45,7 +45,6 @@ def start_pannel(_):
                         text=_["S_B_4"], url=f"{SUPPORT_CHANNEL}"
                     )
                 ]
-                [
             )
         if SUPPORT_GROUP:
             buttons.append(
