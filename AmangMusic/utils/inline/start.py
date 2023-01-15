@@ -23,5 +23,52 @@ def start_pannel(_):
                 url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
             )
         ]
+  buttons = [
+        [
+            InlineKeyboardButton(
+                text=_["S_B_1"],
+                url=f"https://t.me/{app.username}?start=help",
+            ),
+            InlineKeyboardButton(
+                text=_["S_B_2"], callback_data="settings_helper"
+            ),
+         if SUPPORT_CHANNEL and SUPPORT_GROUP:
+    else:
+        if SUPPORT_CHANNEL:
+            buttons.append(
+                [
+                    InlineKeyboardButton(
+                        text=_["S_B_4"], url=f"{SUPPORT_CHANNEL}"
+                    )
+                ]
+            ),
+        ]
+   if SUPPORT_GROUP:
+            buttons.append(
+                [
+                    InlineKeyboardButton(
+                        text=_["S_B_3"], url=f"{SUPPORT_GROUP}"
+                    )
+                ]
+            )
+   if GITHUB_REPO:
+        buttons.append(
+            [
+                InlineKeyboardButton(
+                    text=_["S_B_6"], url=f"{GITHUB_REPO}"
+                ),
+            ]
+        )
+    else:
+        if GITHUB_REPO:
+            buttons.append(
+                [
+                    InlineKeyboardButton(
+                        text=_["S_B_6"], url=f"{GITHUB_REPO}"
+                    ),
+                ]
+            )
+    buttons.append(
+        [InlineKeyboardButton(text=_["ST_B_6"], callback_data="LG")]
     )
     return buttons
