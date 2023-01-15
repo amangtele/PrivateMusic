@@ -35,6 +35,7 @@ def start_pannel(_):
                 InlineKeyboardButton(
                     text=_["S_B_3"], url=f"{SUPPORT_GROUP}"
                 ),
+            ]
         )
     else:
         if SUPPORT_CHANNEL:
