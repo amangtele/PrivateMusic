@@ -16,13 +16,14 @@ from AmangMusic import app
 
 
 def start_pannel(_):
- buttons.append(
+ buttons = [
         [
             InlineKeyboardButton(
                 text=_["S_B_5"],
                 url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
             ),
         ]
+           ]
   buttons = [
         [
             InlineKeyboardButton(
