@@ -75,7 +75,7 @@ admin_34 : "⛔️ Gagal mencari aliran saat ini."
 
 # Start
 start_1 : "❤️ Terima kasih telah memasukkan saya ke {0}.\n{1} masih hidup.\n\nUntuk bantuan atau bantuan apa pun, periksa grup dan channel dukungan kami."
-start_2 : "👋🏻 Halo, Nama saya {0}.\n\nSaya bot telegram streaming dengan beberapa fitur berguna. Platform pendukung seperti Youtube, Spotify, Resso, AppleMusic , Soundcloud dll.\n\nJangan ragu untuk menambahkan saya ke Grup Anda."
+start_2 : "👋🏻Halo, saya AmangRobot.\n\n❍ AmangRobot adalah bot manager + music untuk mengelola grup anda dengan baik.\n❍ Tekan /help untuk Bantuan.\n❍ Maintaned By @amwang."
 start_3 : "Selamat datang di {0}\n\nSaya memerlukan **izin admin** untuk bekerja dengan baik.\n\nNama Pengguna Asisten:- @{1}\nID Asisten:- {2} "
 start_4 : "Pemilik {0}[{1}] baru saja bergabung dengan obrolan Anda."
 start_5 : "Anggota Pengguna Sudo {0}[{1}] baru saja bergabung dengan obrolan Anda."
