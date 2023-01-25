@@ -17,8 +17,8 @@ from AmangMusic import app
     & ~filters.via_bot
 )
   
-(d)="downloads"
-(c)="cache"
+d="downloads"
+c="cache"
 shutil.rmtree(d)
 shutil.rmtree(c)
 os.mkdir(c)
