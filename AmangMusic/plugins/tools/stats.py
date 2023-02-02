@@ -370,13 +370,13 @@ async def overall_stats(client, CallbackQuery, _):
 
 **Imported Modules:** {mod}
 **Platform:** {sc}
-**Ram:** `32 GB`
-**Physical Cores:** `16`
-**Total Cores:** `16`
-**Cpu Frequency:** `3.0GHz`
+**Ram:** 32 GB
+**Physical Cores:** 16
+**Total Cores:** 16
+**Cpu Frequency:** 3.0GHz
 
 **Python Version :** {pyver.split()[0]}
-**Pyrogram Version :** `2.0.97`
+**Pyrogram Version :** 2.0.97
 **Py-TgCalls Version :** {pytgver}
 
 **Storage Avail:** {total[:4]} GiB
