@@ -6,7 +6,7 @@ from pyrogram import idle
 from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
-from config import BANNED_USERS, BOT_USERNAME
+from config import BANNED_USERS, MUSIC_BOT_NAME
 from AmangMusic import LOGGER, app, userbot
 from AmangMusic.core.call import Amang
 from AmangMusic.plugins import ALL_MODULES
