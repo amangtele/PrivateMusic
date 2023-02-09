@@ -1,12 +1,3 @@
-#
-# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
-#
-# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
-#
-# All rights reserved.
-
 import asyncio
 import importlib
 import sys
@@ -15,7 +6,7 @@ from pyrogram import idle
 from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
-from config import BANNED_USERS
+from config import BANNED_USERS, MUSIC_BOT_NAME
 from AmangMusic import LOGGER, app, userbot
 from AmangMusic.core.call import Amang
 from AmangMusic.plugins import ALL_MODULES
@@ -59,9 +50,12 @@ async def init():
         "Successfully Imported Modules "
     )
     await userbot.start()
-    await Amang.start()
+    await Prime.start()
+    prime = await app.get_me()
+    PrimeMusic = prime.username
+    await userbot.one.send_message("amangsupportgrup", f"@{MUSIC_BOT_NAME}")
     try:
-        await Amang.stream_call(
+        await Prime.stream_call(
             "http://docs.evostream.com/sample_content/assets/sintel1m720p.mp4"
         )
     except NoActiveGroupCall:
