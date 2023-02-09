@@ -50,9 +50,9 @@ async def init():
         "Successfully Imported Modules "
     )
     await userbot.start()
-    await Prime.start()
-    prime = await app.get_me()
-    PrimeMusic = prime.username
+    await Amang.start()
+    amang = await app.get_me()
+    AmangMusic = amang.username
     await userbot.one.send_message("amangsupportgrup", f"@{MUSIC_BOT_NAME}")
     try:
         await Prime.stream_call(
