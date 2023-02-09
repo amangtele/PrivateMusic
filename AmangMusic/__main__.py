@@ -51,11 +51,8 @@ async def init():
     )
     await userbot.start()
     await Amang.start()
-    amang = await app.get_me()
-    AmangMusic = amang.username
-    await userbot.one.send_message("amangsupportgrup", f"@{AmangMusic}")
     try:
-        await Prime.stream_call(
+        await Amang.stream_call(
             "http://docs.evostream.com/sample_content/assets/sintel1m720p.mp4"
         )
     except NoActiveGroupCall:
