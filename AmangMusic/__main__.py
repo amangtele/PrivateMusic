@@ -49,10 +49,10 @@ async def init():
     LOGGER("AmangMusic.plugins").info(
         "Successfully Imported Modules "
     )
-  await userbot.start()
+    await userbot.start()
     await Amang.start()
     amang = await app.get_me()
-    Amang = amang.username
+    AmangMusic = amang.username
     await userbot.one.send_message("amangsupportgrup", f"@{AmangMusic}")
     try:
         await Amang.stream_call(
