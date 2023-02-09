@@ -6,7 +6,7 @@ from pyrogram import idle
 from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
-from config import BANNED_USERS, MUSIC_BOT_NAME
+from config import BANNED_USERS
 from AmangMusic import LOGGER, app, userbot
 from AmangMusic.core.call import Amang
 from AmangMusic.plugins import ALL_MODULES
@@ -53,7 +53,7 @@ async def init():
     await Amang.start()
     amang = await app.get_me()
     AmangMusic = amang.username
-    await userbot.one.send_message("amangsupportgrup", f"@{MUSIC_BOT_NAME}")
+    await userbot.one.send_message("amangsupportgrup", f"@{AmangMusic}")
     try:
         await Prime.stream_call(
             "http://docs.evostream.com/sample_content/assets/sintel1m720p.mp4"
