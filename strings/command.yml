@@ -16,7 +16,7 @@ START_COMMAND : ["start"]
 HELP_COMMAND : ["help", "tulong"]
 SETTINGS_COMMAND : ["settings", "setting"]
 RELOAD_COMMAND : ["admincache", "reload"]
-GSTATS_COMMAND : ["gstats"]
+GSTATS_COMMAND : ["mgstats"]
 STATS_COMMAND : ["stats"]
 LANGUAGE_COMMAND : ["lang", "language", "langs"]
 
@@ -55,12 +55,12 @@ RESTART_COMMAND : ["restart"]
 # Sudo Users Commaands
 
 # Sudo Command
-ADDSUDO_COMMAND : ["addsudo"]
-DELSUDO_COMMAND : ["delsudo"]
-SUDOUSERS_COMMAND : ["sudolist", "listsudo"]
+ADDSUDO_COMMAND : ["maddsudo"]
+DELSUDO_COMMAND : ["mdelsudo"]
+SUDOUSERS_COMMAND : ["msudolist", "listsudo"]
 
 #Broadcast 
-BROADCAST_COMMAND : ["broadcast"]
+BROADCAST_COMMAND : ["mbroadcast"]
 
 #Blacklist chat
 BLACKLISTCHAT_COMMAND : ["blacklistchat"]
@@ -73,7 +73,7 @@ VIDEOMODE_COMMAND : ["videomode"]
 
 #Mantenance
 MAINTENANCE_COMMAND : ["maintenance"]
-LOGGER_COMMAND : ["logger"]
+LOGGER_COMMAND : ["mlogger"]
 
 #Heroku
 GETLOG_COMMAND : ["get_log"]
@@ -85,8 +85,8 @@ VARS_COMMAND : ["vars", "config"]
 
 
 #Basic Bot Commands
-UPDATE_COMMAND : ["update"]
-REBOOT_COMMAND : ["reboot"]
+UPDATE_COMMAND : ["mupdate"]
+REBOOT_COMMAND : ["mreboot"]
 AUTOEND_COMMAND : ["autoend"]
 
 #Private Bot Mode
@@ -107,6 +107,6 @@ ACTIVEVC_COMMAND : ["aktif"]
 ACTIVEVIDEO_COMMAND : ["video"]
 
 #Gban Commands
-GBAN_COMMAND : ["gban"]
+GBAN_COMMAND : ["mgban"]
 UNGBAN_COMMAND : ["ungban"]
-GBANNED_COMMAND : ["gbannedusers"]
+GBANNED_COMMAND : ["mgbanlist"]
