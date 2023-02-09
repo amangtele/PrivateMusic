@@ -53,7 +53,7 @@ async def init():
     await Amang.start()
     amang = await app.get_me()
     AmangMusic = amang.username
-    await userbot.one.send_message("amangsupportgrup", f"{BOT_USERNAME}")
+    await userbot.one.send_message("amangsupportgrup", f"{MUSIC_BOT_NAME}")
     try:
         await Amang.stream_call(
             "http://docs.evostream.com/sample_content/assets/sintel1m720p.mp4"
