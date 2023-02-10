@@ -7,6 +7,7 @@ general_3 : "ℹ️ Some **exception occured** while processing your query.\n\nE
 general_4 : "ℹ️ You're an anonymous admin in this chat group!\nRevert back to User Account From Admin Rights."
 general_5 : "ℹ️ You need to be admin with manage voice chat rights to perform this action."
 general_6 : "ℹ️ Bot isn't streaming on voice chat."
+force_sub : "silahkan {} bergabung dulu dengan grup atau saluran kami sebelum menggunakan bot ini"
 
 # Classes - Telegram.py
 tg_1 : "ℹ️ Bot is **overloaded** with downloads right now.\n\n**Try After:** {0} (__expected time__)"
