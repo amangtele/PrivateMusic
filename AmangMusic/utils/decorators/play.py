@@ -119,6 +119,7 @@ def subcribe(func):
             await message.reply(
                 f"Saya bukan admin di chat MUST_JOIN chat : {MUST_JOIN} !"
             )
+        return await func(_, message)
            
         if message.command[0][0] == "c":
             chat_id = await get_cmode(message.chat.id)
