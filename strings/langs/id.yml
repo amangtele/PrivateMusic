@@ -7,7 +7,7 @@ general_3 : "ℹ️ Beberapa **pengecualian terjadi** saat memproses kueri Anda.
 general_4 : "ℹ️ Anda adalah admin anonim di grup obrolan ini!\nKembali ke Akun Pengguna Dari Hak Admin."
 general_5 : "ℹ️ Anda harus menjadi admin dengan mengelola hak obrolan suara untuk melakukan tindakan ini."
 general_6 : "ℹ️ Bot tidak streaming di obrolan suara."
-
+force_sub : "silahkan {} bergabung dulu dengan grup atau saluran kami sebelum menggunakan bot ini"
 # Classes - Telegram.py
 tg_1 : "ℹ️ Bot **kelebihan beban** dengan unduhan sekarang.\n\n**Coba Setelah:** {0} (__waktu yang diharapkan__)"
 tg_2 : "⛔️ Gagal mengunduh media dari telegram."
