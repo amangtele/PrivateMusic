@@ -9,7 +9,7 @@
 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from config import PLAYLIST_IMG_URL, PRIVATE_BOT_MODE, MUST_JOIN, adminlist
+from config import PLAYLIST_IMG_URL, PRIVATE_BOT_MODE, adminlist
 from strings import get_string
 from AmangMusic import YouTube, app
 from AmangMusic.misc import SUDOERS
@@ -21,6 +21,7 @@ from AmangMusic.utils.database import (get_cmode, get_lang,
 from AmangMusic.utils.database.memorydatabase import is_maintenance
 from AmangMusic.utils.inline.playlist import botplaylist_markup
 from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
+from config import MUST_JOIN
 
 def PlayWrapper(command):
     async def wrapper(client, message):
