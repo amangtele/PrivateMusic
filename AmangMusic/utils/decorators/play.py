@@ -9,7 +9,7 @@
 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from config import PLAYLIST_IMG_URL, PRIVATE_BOT_MODE, adminlist
+from config import PLAYLIST_IMG_URL, PRIVATE_BOT_MODE, MUST_JOIN, adminlist
 from strings import get_string
 from AmangMusic import YouTube, app
 from AmangMusic.misc import SUDOERS
@@ -20,6 +20,8 @@ from AmangMusic.utils.database import (get_cmode, get_lang,
                                        is_served_private_chat)
 from AmangMusic.utils.database.memorydatabase import is_maintenance
 from AmangMusic.utils.inline.playlist import botplaylist_markup
+from pyrogram.errors import ChatAdminRequired, ChatWriteForbidden
+from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
 
 def PlayWrapper(command):
     async def wrapper(client, message):
@@ -86,7 +88,38 @@ def PlayWrapper(command):
             return await message.reply_text(
                 _["general_4"], reply_markup=upl
             )
-
+def subcribe(func):
+    async def wrapper(_, message: Message):
+        user_id = message.from_user.id
+        user_name = message.from_user.first_name
+        rpk = "[" + user_name + "](tg://user?id=" + str(user_id) + ")"
+        if not MUST_JOIN: 
+            return
+        try:
+            try:
+                await app.get_chat_member(MUST_JOIN, message.from_user.id)
+            except UserNotParticipant:
+                if MUST_JOIN.isalpha():
+                    anjay = "https://t.me/" + MUST_JOIN
+                else:
+                    chat_info = await app.get_chat(MUST_JOIN)
+                    chat_info.invite_link
+                try:
+                    await message.reply(
+                        f"Hallo {rpk}. Agar Bisa Menggunakan Bot Anda Harus Masuk Ke Channel Updates Bot Terlebih Dahulu!. Silahkan Klik Tombol Di Bawah Untuk Join Ke Channel Update Bot.",
+                        disable_web_page_preview=True,
+                        reply_markup=InlineKeyboardMarkup(
+                            [[InlineKeyboardButton("💌 Join Channel Bot", url=anjay)]]
+                        ),
+                    )
+                    await message.stop_propagation()
+                except ChatWriteForbidden:
+                    pass
+        except ChatAdminRequired:
+            await message.reply(
+                f"Saya bukan admin di chat MUST_JOIN chat : {MUST_JOIN} !"
+            )
+           
         if message.command[0][0] == "c":
             chat_id = await get_cmode(message.chat.id)
             if chat_id is None:
