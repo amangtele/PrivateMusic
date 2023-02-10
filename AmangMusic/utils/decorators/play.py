@@ -20,7 +20,7 @@ from AmangMusic.utils.database import (get_cmode, get_lang,
                                        is_served_private_chat)
 from AmangMusic.utils.database.memorydatabase import is_maintenance
 from AmangMusic.utils.inline.playlist import botplaylist_markup
-
+from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
 
 def PlayWrapper(command):
     async def wrapper(client, message):
