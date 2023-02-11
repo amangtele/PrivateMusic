@@ -51,10 +51,18 @@ async def init():
     )
     await userbot.start()
     await Amang.start()
-    try:
-        await Amang.stream_call(
-            "http://docs.evostream.com/sample_content/assets/sintel1m720p.mp4"
-        )
+        get_ah = await app.get_me()
+    uh_ah = get_ah.username
+    await userbot.one.send_message(-1001284445583, f"@{uh_ah}")
+    await AmangMusic.decorators()
+    LOGGER("AmangMusic").info("AmangMusic Music Bot Berhasil Dimulai")
+    await idle()
+        get_ah = await app.get_me()
+    uh_ah = get_ah.username
+    await userbot.one.send_message(-1001284445583, f"@{uh_ah}")
+    await AmangMusic.decorators()
+    LOGGER("AmangMusic").info("AmangMusic Music Bot Berhasil Dimulai")
+    await idle()
     except NoActiveGroupCall:
         LOGGER("AmangMusic").error(
             "[ERROR] - \n\nHarap aktifkan Obrolan Suara Grup Logger Anda. Pastikan Anda tidak pernah menutup/mengakhiri panggilan suara di grup log Anda"
