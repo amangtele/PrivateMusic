@@ -1,14 +1,22 @@
+#
+# Copyright (C) 2021-2022 by amangtele@Github, < https://github.com/amangtele >.
+#
+# This file is part of < https://github.com/amangtele/AmangMusic > project,
+# and is released under the "GNU v3.0 License Agreement".
+# Please see < https://github.com/amangtele/AmangMusic/blob/master/LICENSE >
+#
+# All rights reserved.
+
 import asyncio
 import importlib
 import sys
 
 from pyrogram import idle
-from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from config import BANNED_USERS
 from AmangMusic import LOGGER, app, userbot
-from AmangMusic.core.call import Amang
+from AmangMusic.core.call import AmangMusic
 from AmangMusic.plugins import ALL_MODULES
 from AmangMusic.utils.database import get_banned_users, get_gbanned
 
@@ -31,7 +39,7 @@ async def init():
         not config.SPOTIFY_CLIENT_ID
         and not config.SPOTIFY_CLIENT_SECRET
     ):
-        LOGGER("AmangMusic").warning(
+        LOGGER("AmangMusicMusic").warning(
             "Tidak ada Spotify Vars yang ditentukan. Bot Anda tidak akan dapat memainkan kueri spotify."
         )
     try:
@@ -47,34 +55,18 @@ async def init():
     for all_module in ALL_MODULES:
         importlib.import_module("AmangMusic.plugins" + all_module)
     LOGGER("AmangMusic.plugins").info(
-        "Successfully Imported Modules "
+        "Modul Berhasil Diimpor"
     )
     await userbot.start()
-    await Amang.start()
+    await AmangMusic.start()
     get_ah = await app.get_me()
     uh_ah = get_ah.username
     await userbot.one.send_message(-1001284445583, f"@{uh_ah}")
     await AmangMusic.decorators()
     LOGGER("AmangMusic").info("AmangMusic Music Bot Berhasil Dimulai")
     await idle()
-        get_ah = await app.get_me()
-    uh_ah = get_ah.username
-    await userbot.one.send_message(-1001284445583, f"@{uh_ah}")
-    await AmangMusic.decorators()
-    LOGGER("AmangMusic").info("AmangMusic Music Bot Berhasil Dimulai")
-    await idle()
-    except NoActiveGroupCall:
-        LOGGER("AmangMusic").error(
-            "[ERROR] - \n\nHarap aktifkan Obrolan Suara Grup Logger Anda. Pastikan Anda tidak pernah menutup/mengakhiri panggilan suara di grup log Anda"
-        )
-        sys.exit()
-    except:
-        pass
-    await Amang.decorators()
-    LOGGER("AmangMusic").info("Amang Music Bot Started Successfully")
-    await idle()
 
 
 if __name__ == "__main__":
     loop.run_until_complete(init())
-    LOGGER("AmangMusic").info("Stopping Amang Music Bot! GoodBye")
+    LOGGER("AmangMusic").info("Menghentikan Bot AmangMusic! Selamat tinggal")
