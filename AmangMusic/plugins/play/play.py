@@ -21,7 +21,7 @@ from config import BANNED_USERS, lyrical
 from strings import get_command
 from AmangMusic import (Apple, Resso, SoundCloud, Spotify, Telegram,
                         YouTube, app)
-from AmangMusic.core.call import AmangMusic
+from AmangMusic.core.call import Amang
 from AmangMusic.utils import seconds_to_min, time_to_seconds
 from AmangMusic.utils.channelplay import get_channeplayCB
 from AmangMusic.utils.database import is_video_allowed
