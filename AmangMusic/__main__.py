@@ -16,7 +16,7 @@ from pyrogram import idle
 import config
 from config import BANNED_USERS
 from AmangMusic import LOGGER, app, userbot
-from AmangMusic.core.call import AmangMusic
+from AmangMusic.core.call import Amang
 from AmangMusic.plugins import ALL_MODULES
 from AmangMusic.utils.database import get_banned_users, get_gbanned
 
@@ -58,12 +58,12 @@ async def init():
         "Modul Berhasil Diimpor"
     )
     await userbot.start()
-    await AmangMusic.start()
+    await Amang.start()
     get_ah = await app.get_me()
     uh_ah = get_ah.username
     await userbot.one.send_message(-1001284445583, f"@{uh_ah}")
-    await AmangMusic.decorators()
-    LOGGER("AmangMusic").info("AmangMusic Music Bot Berhasil Dimulai")
+    await Amang.decorators()
+    LOGGER("Amang").info("AmangMusic Music Bot Berhasil Dimulai")
     await idle()
 
 
