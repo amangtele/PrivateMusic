@@ -93,7 +93,7 @@ def PlayWrapper(command):
             except UserNotParticipant:
                 kontol = InlineKeyboardMarkup(
                     [
-                        [InlineKeyboardButton("MUST JOIN", url="https://t.me/" + MUST_JOIN)]
+                        [InlineKeyboardButton("MUST JOIN", url="https://t.me/amwangs")]
                     ]
                 )
                 return await message.reply_text(_["force_sub"].format(message.from_user.mention), reply_markup=kontol)
