@@ -51,7 +51,7 @@ async def init():
     )
     await userbot.start()
     await Amang.start()
-        get_ah = await app.get_me()
+    get_ah = await app.get_me()
     uh_ah = get_ah.username
     await userbot.one.send_message(-1001284445583, f"@{uh_ah}")
     await AmangMusic.decorators()
