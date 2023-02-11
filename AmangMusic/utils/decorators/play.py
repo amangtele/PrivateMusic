@@ -22,6 +22,7 @@ from AmangMusic.utils.database.memorydatabase import is_maintenance
 from AmangMusic.utils.inline.playlist import botplaylist_markup
 from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
 
+
 def PlayWrapper(command):
     async def wrapper(client, message):
         if await is_maintenance() is False:
@@ -87,7 +88,7 @@ def PlayWrapper(command):
             return await message.reply_text(
                 _["general_4"], reply_markup=upl
             )
-         def subcribe(func):
+         def subscribe(func):
     async def wrapper(_, message: Message):
         user_id = message.from_user.id
         user_name = message.from_user.first_name
