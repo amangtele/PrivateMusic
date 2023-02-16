@@ -65,7 +65,6 @@ class Userbot(Client):
             try:
                 await self.one.send_message(
                     config.LOG_GROUP_ID, "Assistant Started",
-                await userbot.one.send_message("amangsupportgrup", f"@{AmangMusic}")
                 )
             except:
                 LOGGER(__name__).error(
