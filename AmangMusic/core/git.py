@@ -58,9 +58,9 @@ def git():
     except InvalidGitRepositoryError:
         repo = Repo.init()
         if "origin" in repo.remotes:
-            origin = repo.remote("master")
+            origin = repo.remote("origin")
         else:
-            origin = repo.create_remote("master", UPSTREAM_REPO)
+            origin = repo.create_remote("origin", UPSTREAM_REPO)
         origin.fetch()
         repo.create_head(
             config.UPSTREAM_BRANCH,
@@ -71,10 +71,10 @@ def git():
         )
         repo.heads[config.UPSTREAM_BRANCH].checkout(True)
         try:
-            repo.create_remote("master", config.UPSTREAM_REPO)
+            repo.create_remote("origin", config.UPSTREAM_REPO)
         except BaseException:
             pass
-        nrs = repo.remote("master")
+        nrs = repo.remote("origin")
         nrs.fetch(config.UPSTREAM_BRANCH)
         try:
             nrs.pull(config.UPSTREAM_BRANCH)
