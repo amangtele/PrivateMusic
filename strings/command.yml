@@ -11,17 +11,17 @@
 # Commands in Every Language
 
 # Bot Commands
-PING_COMMAND : ["ping", "hidup ga", "amang"]
+PING_COMMAND : ["mping", "hidup ga", "amang"]
 START_COMMAND : ["start"]
-HELP_COMMAND : ["help", "tulong"]
+HELP_COMMAND : ["mxhelp", "tulong"]
 SETTINGS_COMMAND : ["settings", "setting"]
 RELOAD_COMMAND : ["admincache", "reload"]
 GSTATS_COMMAND : ["mgstats"]
-STATS_COMMAND : ["stats"]
+STATS_COMMAND : ["mstats"]
 LANGUAGE_COMMAND : ["lang", "language", "langs"]
 
 # Play Commands
-PLAY_COMMAND : ["play", "vplay", "cplay", "cvplay", "playforce", "vplayforce", "cplayforce", "cvplayforce", "mau dengerin"]
+PLAY_COMMAND : ["play", "vplay", "cplay", "cvplay", "playforce", "vplayforce", "cplayforce", "cvplayforce", "p"]
 PLAYMODE_COMMAND : ["playmode"]
 CHANNELPLAY_COMMAND : ["channelplay"]
 STREAM_COMMAND : ["stream", "cstream", "streamforce"]
@@ -95,18 +95,18 @@ UNAUTHORIZE_COMMAND : ["unauthorize"]
 AUTHORIZED_COMMAND : ["authorized"]
 
 #Block Users Command
-BLOCK_COMMAND : ["block"]
-UNBLOCK_COMMAND : ["unblock"]
-BLOCKED_COMMAND : ["blockedusers"]
+BLOCK_COMMAND : ["mblock"]
+UNBLOCK_COMMAND : ["munblock"]
+BLOCKED_COMMAND : ["mblockedusers"]
 
 #sPEEDTEST
-SPEEDTEST_COMMAND : ["speedtest"]
+SPEEDTEST_COMMAND : ["mspeedtest"]
 
 #Voice chat commands
-ACTIVEVC_COMMAND : ["aktif"]
-ACTIVEVIDEO_COMMAND : ["video"]
+ACTIVEVC_COMMAND : ["am", "activevc"]
+ACTIVEVIDEO_COMMAND : ["av", "activevd"]
 
 #Gban Commands
 GBAN_COMMAND : ["mgban"]
-UNGBAN_COMMAND : ["ungban"]
+UNGBAN_COMMAND : ["mungban"]
 GBANNED_COMMAND : ["mgbanlist"]
