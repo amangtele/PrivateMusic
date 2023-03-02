@@ -77,16 +77,16 @@ async def activevi_(_, message: Message):
         )
 
 
+@app.on_message(filters.command("activevc", [".", "^", "-", "!", "/"]) & SUDOERS)
+async def activeyukki(_, message: Message):
+    ms = len(await get_active_chats())
+    vd = len(await get_active_video_chats())
+    await app.send_message(message.chat.id, 
+        f"🫵 **Active Chats:**\n\n• **Music:** `{ms}`\n• **Stream:** `{vd}`")
+
 @app.on_message(filters.command("active", [".", "^", "-", "!", "/"]) & SUDOERS)
 async def activeyukki(_, message: Message):
     ms = len(await get_active_chats())
     vd = len(await get_active_video_chats())
     await app.send_message(message.chat.id, 
         f"🫵 **Active Chats:**\n\n• **Music:** `65`\n• **Stream:** `19`")
-    
-    @app.on_message(filters.command("activevc", [".", "^", "-", "!", "/"]) & SUDOERS)
-async def activeyukki(_, message: Message):
-    ms = len(await get_active_chats())
-    vd = len(await get_active_video_chats())
-    await app.send_message(message.chat.id, 
-        f"🫵 **Active Chats:**\n\n• **Music:** `{ms}`\n• **Stream:** `{vd}`")
